@@ -3,14 +3,13 @@
 const app = getApp()
 const parser=require('../../utils/util').parser
 Page({
-  data: {
-    remainTime:300000,
+  data: {    
     showingTime:"5:00",
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   startTimer:function(){
-    const endTime=Date.now()+this.data.remainTime
+    const endTime=Date.now()+300000
     //console.log(Date.now(),this)
     setInterval(()=>{
       //console.log(parser(endTime-Date.now()))
